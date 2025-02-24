@@ -13,7 +13,8 @@ class CoffeeMachine
     when :cocoa
       serve_cocoa(options)
     else
-      serve_coffee(options)
+      serve_unknown_beverage if drink != :coffee
+      serve_coffee(options) if drink == :coffee
     end
   end
 
@@ -39,6 +40,10 @@ class CoffeeMachine
     @driver.dispense_cocoa_mix
     @driver.dispense_water
     add_whipped_cream(options) if options[:fluffy]
+  end
+
+  def serve_unknown_beverage
+    @driver.dispense_water
   end
 
   def add_sweetener(_options)
