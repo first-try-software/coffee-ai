@@ -1,4 +1,4 @@
-require_relative "../lib/coffee_machine_claude35"
+require_relative "../lib/qwen25-coder"
 require_relative "../lib/driver"
 
 RSpec.describe CoffeeMachine do
