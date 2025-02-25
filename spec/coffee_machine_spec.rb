@@ -1,4 +1,4 @@
-require_relative "../lib/coffee_machine_deepseek3"
+require_relative "../lib/coffee_machine_copilot"
 require_relative "../lib/driver"
 
 RSpec.describe CoffeeMachine do
