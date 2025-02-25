@@ -2,10 +2,6 @@ require_relative "../lib/coffee_machine"
 require_relative "../lib/driver"
 
 RSpec.describe CoffeeMachine do
-  subject(:machine) { described_class.new(driver: driver) }
-
-  let(:driver) { Driver.new }
-
   describe "#vend" do
     it "serves hot water if an unknown beverage is requested" do
       io = StringIO.new
